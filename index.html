@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>photo editor</title>
+</head>
+<body>
+    <div class="wrapper">
+      <!-- effects -->
+      <div class="effects">
+         <div class="effect_items">
+             <ul>
+                 <li><i class='bx bxs-brightness-half'></i></li>
+                  <li><i class='bx bxs-brush' ></i></li>
+                  <li><i class='bx bxs-collection' ></i></li>
+                  <li><i class='bx bxs-color-fill' ></i></li>
+                  <li><i class='bx bxs-magic-wand' ></i></li>
+                  <li onclick="Download_btn()"><i class='bx bx-export' ></i><p>Dawnload</p></li>
+                  <li><div class="effect_reset">
+                     <button id='clearAll'>Clear</button></div></li>
+             </ul>
+         </div>
+         
+     </div>
+                    <!-- Content -->
+      <div class="content">
+         <div class="choose_image">
+            <div class="upload_img_box">
+               <i class='bx bxs-image-add' ></i><br>
+               <input type="file" name="selectedImage" id="selectedImage" accept="image/jpeg, image/png">
+               <p id="hint">Choose Image</p>
+            </div>
+      </div>
+      <canvas id="image_canvas"></canvas>
+      <div class="image_holder ">
+         <button id="remove_img_btn"></button>
+         <img src="" alt="img" id="image" width="100%" height="500px">
+      </div>
+      <div class="options">
+         <div class="option">
+            <input type="range" max="200" min="0" value="100" id="brightness" class="slider">
+            <p id="brightVal" class="show_value">100</p>
+         </div>
+         <div class="option">
+            <input type="range" max="40" min="0" value="0" id="blur" class="slider">
+            <p id="blurVal" class="show_value">0</p>
+         </div>
+         <div class="option">
+            <input type="range" max="100" min="0" value="0" id="greyScale" class="slider">
+            <p id="greyVal" class="show_value">0</p>
+         </div>
+         <div class="option">
+            <input type="range" max="100" min="0" value="0" id="hue" class="slider">
+            <p id="hueVal" class="show_value">0</p>
+         </div>
+         <div class="option">
+            <input type="range" max="100" min="1" value="1" id="saturation" class="slider">
+            <p id="saturationVal" class="show_value">1</p>
+         </div>
+      </div>
+
+    </div>
+</div>
+    <script src="js/main.js"></script>
+</body>
+</html>
